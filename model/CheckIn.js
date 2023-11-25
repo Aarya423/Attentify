@@ -5,9 +5,5 @@ const Schema=mongoose.Schema({
     "CheckedIn":Boolean,
     "Feeling":String,
 });
-const pomo=mongoose.model('Pomodoro',Schema);
+const pomo=mongoose.model('CheckIn',Schema);
 module.exports=(pomo);
-[{time: "", checkin:true, feeling: "happy"}]
-
-let newDate = new Date();
-newDate.getDate();
