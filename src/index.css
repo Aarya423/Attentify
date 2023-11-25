@@ -1,15 +1,20 @@
+@font-face {
+  font-family: 'TenorSans';
+  src: local('TenorSans'), url('./fonts/TenorSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "TenorSans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Open Sans', 'Segoe UI', 'Helvetica Neue', 'Ubuntu', sans-serif;
-  border: solid 2px #1f1e2e;
+  /* border: solid 2px #1f1e2e; */
   width: 430px;
   height: 590px;
-  background-color: #27283c;
+  background-color: #F1FAEE;
   margin: 0;
   overflow: hidden;
   scrollbar-width: none;
@@ -18,4 +23,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.app-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
