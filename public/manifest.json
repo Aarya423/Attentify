@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Attentify",
+  "version": "0.0.1",
+  "description": "Focus on your studies!",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "icons": { 
+      "128": "attentifyLogo.png" 
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["contentScript.css"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
+
+
