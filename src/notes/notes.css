@@ -17,3 +17,42 @@ body {
   li {
     text-align: left;
   }
+
+  /* Base button styles */
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Save Note button styles */
+.save-button {
+  background-color: #333; /* Dark gray color */
+}
+
+.save-button:hover {
+  background-color: #555; /* A lighter shade of gray for hover state */
+}
+
+/* Clear Notes button styles */
+.clear-button {
+  background-color: #d9534f; /* Bootstrap's btn-danger color for reference */
+}
+
+.clear-button:hover {
+  background-color: #c9302c; /* A darker shade for hover state */
+}
