@@ -1,0 +1,11 @@
+button.off {
+    background-color: #444;
+}
+
+button.on#break-button{
+    background-color: blue;
+}
+
+button.on#work-button {
+    background-color: red;
+}
