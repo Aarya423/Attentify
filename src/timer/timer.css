@@ -9,3 +9,40 @@ button.on#break-button{
 button.on#work-button {
     background-color: red;
 }
+
+.TimerContainer{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
+    
+}
+#time{
+font-size: 125px;
+color: #264653;
+
+}
+body{
+    background-color: #F1FAEE;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+button{
+    padding: 20px;
+    margin: 5px;
+    background-color: #2A9D8F;
+    border-radius: 50px;
+    width: 150px;
+    height: auto;
+    font-size: 25px;
+    color: aliceblue;
+    
+}
