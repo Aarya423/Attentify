@@ -70,12 +70,17 @@ document.addEventListener("click", (event) => {
 
 function onClose(){
     const sidebar = document.getElementById("chat-container");
-    const button = document.getElementById("toggle-Chat");
+    const button = document.getElementById("open-Chat");
+    button.style.display = "flex";
     sidebar.style.display = "none";
 }
 function onOpen(){
     const sidebar = document.getElementById("chat-container");
-    const button = document.getElementById("toggle-Chat");
+    const button = document.getElementById("open-Chat");
+    button.style.display = "none";
     sidebar.style.display = "flex";
 
+
 }
+document.getElementById('open-Chat').addEventListener('click', onOpen);
+document.getElementById('close-Chat').addEventListener('click', onClose);

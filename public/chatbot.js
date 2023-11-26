@@ -11,12 +11,22 @@ import { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 app.use('/', express.static(path.join(__dirname, '..', 'mainPage')));
-console.log(process.env.OPENAI_API_KEY);
 const openai = new OpenAI(process.env.OPENAI_API_KEY);
-app.post('/api/chat', async (req, res) => {
-    const userMessage = req.body.message;
+app.post('/api/chat/:response', async (req, res) => {
+    const userMessage = req.params.response;
+
+    const prompts = [
+        "Prompt 1: Only answer to questions that are asked and schedule making requests.\n",
+        "Prompt 2: Answer questions that are asked and schedule making requests.\n",
+        "Prompt 3: Create Multiple choice questions out of the notes given by the user if the user wants to be tested.\n",
+        "Prompt 4: Tell user that the chatbot is meant for schedule creation and multiple choice quiz creation.\n",
+    ];
+
     const chatCompletion = await openai.chat.completions.create({
-        messages: [{ role: "user", content: userMessage }],
+        messages: [{ 
+            role: "user", 
+            content: userMessage, 
+            ...prompts.map((prompt) => ({ role:"system",content:prompt }))}],
         model: "gpt-3.5-turbo",
     });
     res.json({ message: chatCompletion.choices[0].message.content });
