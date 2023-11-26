@@ -16,7 +16,20 @@ document.getElementById('chat-form').addEventListener('submit', async (event) =>
 
 chrome.runtime.onMessage.addListener((request,sender,sendResponse) => {
     if (request.query === "time") {
-        document.querySelector("#time").innerText = `${request.minutes}:${request.seconds}`;
+        let minutes = request.minutes;
+        let seconds = request.seconds;
+        if (seconds == 60) {
+            minutes++;
+            seconds = 0;
+        }
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+        document.querySelector("#time").innerText = `${minutes}:${seconds}`;
     } else {
         console.log("broken")
     }

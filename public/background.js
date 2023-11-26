@@ -24,6 +24,7 @@ chrome.runtime.onMessage.addListener(
                     let differenceInSeconds = differenceInMilliSeconds / (1000);
                     let minutes = Math.floor(differenceInSeconds / 60);
                     let seconds = Math.ceil(differenceInSeconds % 60);
+                   
                     console.log(minutes, seconds)
                     chrome.runtime.sendMessage({query: "time", minutes, seconds})
                 })

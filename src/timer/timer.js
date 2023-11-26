@@ -72,8 +72,21 @@ function Timer() {
 
 function Display(props) {    
     if (props.minutes && props.seconds) {
+        let minutes = props.minutes;
+        let seconds = props.seconds;
+        if (seconds == 60) {
+            minutes++;
+            seconds = 0;
+        }
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
         return (
-            <div id="display">{`${props.minutes}:${props.seconds}`}</div>
+            <div id="display">{`${minutes}:${seconds}`}</div>
         )
     }
           
