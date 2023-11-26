@@ -16,7 +16,7 @@ chrome.runtime.onMessage.addListener(
             let endTime = new Date(new Date().getTime() + durationInMinutes * 60000);
             console.log(endTime);
             chrome.storage.local.set({"timer": endTime.toISOString()})
-            setInterval(() => {
+            let timer = setInterval(() => {
                 chrome.storage.local.get(["timer"], (result) => {
                     let endTime = new Date(result.timer);
                     let now = new Date().getTime();
@@ -25,7 +25,11 @@ chrome.runtime.onMessage.addListener(
                     let minutes = Math.floor(differenceInSeconds / 60);
                     let seconds = Math.ceil(differenceInSeconds % 60);
                    
-                    console.log(minutes, seconds)
+                    if (minutes <= 0 && seconds <= 0) {
+                        clearInterval(timer);
+                        minutes = 0;
+                        seconds = 0;
+                    }
                     chrome.runtime.sendMessage({query: "time", minutes, seconds})
                 })
             }, 1000)

@@ -8,19 +8,19 @@ function Timer() {
     const [breaking, setBreaking] = useState(false);
 
     chrome.storage.local.get(["timer", "working", "breaking"], (result => {
-        if (result.timer) {
-            let endTime = new Date(result.timer);
-            let now = new Date().getTime();
-            let differenceInMilliSeconds = endTime - now;
-            let differenceInSeconds = differenceInMilliSeconds / (1000);
-            let minutes = Math.floor(differenceInSeconds / 60);
-            let seconds = Math.ceil(differenceInSeconds % 60);
-            setMinutes(minutes)
-            setSeconds(seconds)
-        } else {
-            setMinutes("25")
-            setSeconds("00");
-        }
+        // if (result.timer) {
+        //     let endTime = new Date(result.timer);
+        //     let now = new Date().getTime();
+        //     let differenceInMilliSeconds = endTime - now;
+        //     let differenceInSeconds = differenceInMilliSeconds / (1000);
+        //     let minutes = Math.floor(differenceInSeconds / 60);
+        //     let seconds = Math.ceil(differenceInSeconds % 60);
+        //     setMinutes(minutes)
+        //     setSeconds(seconds)
+        // } else {
+        //     setMinutes("25")
+        //     setSeconds("00");
+        // }
         if (result.working != null) {
             setWorking(result.working)
         } 
@@ -39,8 +39,7 @@ function Timer() {
                 console.log(error)
             }
         })
-    },[])
-    
+    },[seconds, minutes])
     function startTimer(durationInMinutes) {
         chrome.runtime.sendMessage({query: "start", time: `${durationInMinutes}`}, function(response) {
             console.log("Response from background:", response);
@@ -85,6 +84,8 @@ function Display(props) {
         if (seconds < 10) {
             seconds = "0" + seconds;
         }
+        console.log(minutes)
+        console.log(seconds)
         return (
             <div id="display">{`${minutes}:${seconds}`}</div>
         )
