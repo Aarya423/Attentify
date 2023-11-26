@@ -200,3 +200,27 @@ margin-left: 270px;
 margin-top: 7px;
 border-radius: 100%;
 }
+
+
+.message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: fit-content;
+    max-width: 100%;
+    font-size: larger;
+}
+
+.user-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 0;
+}
+
+.response-message {
+    background-color: #f1f1f1;
+    color: black;
+    border-bottom-left-radius: 0;
+}

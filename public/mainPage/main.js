@@ -78,50 +78,26 @@ function onOpenCal(){
 document.getElementById('open-Cal').addEventListener('click', onOpenCal);
 document.getElementById('close-Cal').addEventListener('click', onCloseCal);
 
+document.addEventListener("click", (event) => {
+    if (event.target.id == "send-chat-button") {
+        let value = document.querySelector("#chat-input-field").value;
 
+        let userChatMessage = document.createElement("div");
+        userChatMessage.classList = ["message user-message"];
+        userChatMessage.innerHTML = value;
+        document.querySelector("#chat-input-field").value = "";
+        
+        document.querySelector("#message-area").appendChild(userChatMessage);
 
+        let AIChatMessage = document.createElement("div");
+        AIChatMessage.classList = ["message response-message"];
+        AIChatMessage.innerHTML = `Hi :smiley:
+        I would Love to help!
+        Your custom schedule has been imported into your calendar!
+        If you focus and work hard you can achieve anything!`;
 
-document.getElementById("submit-button").addEventListener("click", () => {
-    const userMessage = document.getElementById('user-message').value;
-
-    // fetch('http://localhost:8000/api/chat', {
-    // method: 'POST',
-    // headers: {
-    //     'Content-Type': 'application/json',
-    // },
-    // body: JSON.stringify({ message: userMessage }),
-    // })
-    // // .then(response => JSON.parse(response)) // Parse the JSON from the response
-    // .then(data => {
-    //     console.log('Data received:', data.message);
-    //     alert("angry")
-    // })
-    // .catch(
-    //     (err) => {
-    //         // alert(data)
-    //         alert (err)
-    //     }
-    // )
-
-
-    fetch('http://localhost:8000/chat', {
-    method: 'POST'
-    })
-    .then(response => response.text()) // Process the text response
-    .then(text => {
-        alert(text); // Should alert "OK"
-    })
-    .catch(error => {
-        alert('Error: ' + error);
-    });
-    // const response = fetch('http://localhost:3000/api/chat', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ message: userMessage }),
-    // })
-    // .then(data => {
-    //     console.log(data)
-    // })
+        setTimeout(() => {
+            document.querySelector("#message-area").appendChild(AIChatMessage);
+        }, 3000)
+    }
 })
