@@ -41,18 +41,18 @@ body {
 
 /* Save Note button styles */
 .save-button {
-  background-color: #333; /* Dark gray color */
+  background-color: #1cc5db; /* Dark gray color */
 }
 
 .save-button:hover {
-  background-color: #555; /* A lighter shade of gray for hover state */
+  background-color: #278591; /* A lighter shade of gray for hover state */
 }
 
 /* Clear Notes button styles */
 .clear-button {
-  background-color: #d9534f; /* Bootstrap's btn-danger color for reference */
+  background-color: #1cc5db; /* Bootstrap's btn-danger color for reference */
 }
 
-.clear-button:hover {
-  background-color: #c9302c; /* A darker shade for hover state */
+.clear-button:hover{
+  background-color: #278591;
 }

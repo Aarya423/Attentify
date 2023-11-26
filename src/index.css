@@ -10,8 +10,6 @@ body {
   font-family: "TenorSans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Open Sans', 'Segoe UI', 'Helvetica Neue', 'Ubuntu', sans-serif;
-  /* border: solid 2px #1f1e2e; */
   width: 430px;
   height: 590px;
   background-color: #F1FAEE;
@@ -25,8 +23,9 @@ code {
     monospace;
 }
 
-.app-container {
+#app-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
