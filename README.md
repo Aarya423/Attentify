@@ -9,7 +9,6 @@ One of our team members, Aiden, has ADHD. We were moved when he shared his persp
 ## What it does
 Attentify is a specialized productivity tool designed specifically for individuals with ADHD. It aims to assist them in managing their tasks and improving their focus and study habits. The core features of Attentify include:
 
-- **Customizable Reminders:** Helps users keep track of tasks and deadlines, addressing the common challenge of time management in ADHD. ⏰🗓️
 - **Effortless Note-Taking:** A user-friendly note-taking system that allows for the quick creation, editing, and organization of notes, ideal for capturing thoughts and ideas spontaneously. 📝🎨
 - **Pomodoro Timer Integration:** Incorporates the Pomodoro technique, facilitating focused work sessions interspersed with short breaks. This feature is particularly beneficial in managing attention spans and preventing fatigue. 🍅⏳
 - **AI-Powered Assistance:** Includes an AI assistant that simplifies complex tasks into smaller, manageable steps, aiding users in overcoming the overwhelm often associated with large or daunting tasks. 🤖🚀
