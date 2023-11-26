@@ -7,9 +7,9 @@
     
 }
 #time{
-    font-size: 125px;
-    color: #264653;
-    height: 150px;
+font-size: 125px;
+color: #264653;
+
 }
 body{
     background-color: #F1FAEE;
@@ -48,8 +48,11 @@ body{
     right: 0; /* Align to the right side of the page */
     width: 300px; /* Adjust the width of the chat container */
     height: 100vh; /* Make it full height of the viewport */
-    background-color: #8AB17D; 
+    background-color: #2A9D8F; 
     transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+    border:5px solid;
+    border-color:#264653;
 }
 
 .chat button{
@@ -66,4 +69,8 @@ body{
 #close-Chat{
     width: 50px;
     height: 50px;
+    margin: -3px;
+    border-top-left-radius: 20px
+    
+  
 }
