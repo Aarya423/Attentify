@@ -1,5 +1,5 @@
 document.getElementById('chat-form').addEventListener('submit', async (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     const userMessage = document.getElementById('user-message').value;
     const response = await fetch('/api/chat', {
         method: 'POST',

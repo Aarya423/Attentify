@@ -7,7 +7,7 @@ function Timer() {
     const [working, setWorking] = useState(false);
     const [breaking, setBreaking] = useState(false);
 
-    chrome.storage.local.get(["timer"], (result => {
+    chrome.storage.local.get(["timer", "working", "breaking"], (result => {
         if (result.timer) {
             let endTime = new Date(result.timer);
             let now = new Date().getTime();
@@ -20,6 +20,13 @@ function Timer() {
         } else {
             setMinutes("25")
             setSeconds("00");
+        }
+        if (result.working != null) {
+            setWorking(result.working)
+        } 
+
+        if (result.breaking != null) {
+            setBreaking(result.breaking)
         }
     }))
 

@@ -6,8 +6,12 @@ chrome.runtime.onMessage.addListener(
             let durationInMinutes
             if (request.time == "25") {
                 durationInMinutes = 25;
+                chrome.storage.local.set({working: true})
+                chrome.storage.local.set({breaking: false})
             } else if (request.time == "10") {
                 durationInMinutes = 10;
+                chrome.storage.local.set({working: false})
+                chrome.storage.local.set({breaking: true})
             }
             let endTime = new Date(new Date().getTime() + durationInMinutes * 60000);
             console.log(endTime);
