@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Attentify</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <title>Attentify</title>
+    </head>
+    <body>
         <div class="TimerContainer">
-         <div id="time">00:00</div>   
-         <div class="buttons">
-            <button id="work">Work</button>
-            <button id="break">Break</button>
-
-         </div>
+        <div id="time">00:00</div>   
+            <div class="buttons">
+                <button id="work">Work</button>
+                <button id="break">Break</button>
+            </div>
         </div>
 
         <button class="open-Chat" id="open-Chat">Chat</button>
@@ -22,13 +21,11 @@
             <div class="chat" id="chat">
                 <form id="chat-form">
                     <input type="text" id="user-message" placeholder="Type your message here">
-                    <button type="submit" onclick="onOpen()">Send</button>
-            </form>
-            <div id="bot-response"></div>
+                    <button type="submit" id="submit-button">Send</button>
+                </form>
+                <div id="bot-response"></div>
             </div>
         </div>
         <script src="main.js"></script>
-</body>
-
-<script src="main.js"></script>
+    </body>
 </html>
