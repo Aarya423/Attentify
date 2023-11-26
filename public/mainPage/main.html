@@ -16,11 +16,18 @@
 
          </div>
         </div>
-        <form id="chat-form">
-            <input type="text" id="user-message" placeholder="Type your message here">
-            <button type="submit">Send</button>
-        </form>
-        <div id="bot-response"></div>
+
+
+        <div class="chat-container" id="chat-container">
+            <button class="toggle-chat" id="toggle-Chat" onclick="toggleSidebar()">Chat</button>
+            <div class="chat" id="chat">
+                <form id="chat-form">
+                    <input type="text" id="user-message" placeholder="Type your message here">
+                    <button type="submit">Send</button>
+            </form>
+            <div id="bot-response"></div>
+            </div>
+        </div>
 
 </body>
 
