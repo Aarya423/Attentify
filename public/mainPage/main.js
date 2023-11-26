@@ -56,6 +56,30 @@ function onOpen(){
 document.getElementById('open-Chat').addEventListener('click', onOpen);
 document.getElementById('close-Chat').addEventListener('click', onClose);
 
+
+function onClose(){
+    const sidebar = document.getElementById("Calendar-container");
+    const button = document.getElementById("open-Cal");
+    button.style.display = "flex";
+    sidebar.style.display = "none";
+    (document.getElementById("open-Cal")).style.display ="flex";
+
+}
+function onOpen(){
+    const sidebar = document.getElementById("Calendar-container");
+    const button = document.getElementById("open-Cal");
+    button.style.display = "none";
+    sidebar.style.display = "flex";
+    (document.getElementById("open-Cal")).style.display ="none";
+
+
+}
+document.getElementById('open-Cal').addEventListener('click', onOpen);
+document.getElementById('close-Cal').addEventListener('click', onClose);
+
+
+
+
 document.getElementById("submit-button").addEventListener("click", () => {
     const userMessage = document.getElementById('user-message').value;
 

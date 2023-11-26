@@ -92,3 +92,38 @@ body{
    margin-left: 55PX;
 
 }
+
+#Calendar-container{
+    display: flex;
+    position: fixed;
+    margin-right: 50px;
+    top: 0; /* Adjust top position as needed */
+    left: 0; /* Align to the right side of the page */
+    width: 300px; /* Adjust the width of the chat container */
+    height: 100vh; /* Make it full height of the viewport */
+    background-color: #2A9D8F; 
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+    border:5px solid;
+    border-color:#264653;
+}
+
+#Calendar{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: -270px;
+}
+
+#open-Cal{
+    position: fixed;
+    top: 20px; /* Adjust the distance from the top */
+    left: 320px; /* Adjust the distance from the right */
+    z-index: 999; /* Ensure it's above other elements */
+}
+#close-Cal{
+height: 25px;
+margin-left: 270px;
+margin-top: 7px;
+border-radius: 100%;
+}
