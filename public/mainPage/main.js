@@ -56,6 +56,31 @@ function onOpen(){
 document.getElementById('open-Chat').addEventListener('click', onOpen);
 document.getElementById('close-Chat').addEventListener('click', onClose);
 
+//Calendar stuff
+
+function onCloseCal(){
+    const sidebar = document.getElementById("Calendar-container");
+    const button = document.getElementById("open-Cal");
+    button.style.display = "flex";
+    sidebar.style.display = "none";
+    (document.getElementById("open-Cal")).style.display ="flex";
+
+}
+function onOpenCal(){
+    const sidebar = document.getElementById("Calendar-container");
+    const button = document.getElementById("open-Cal");
+    button.style.display = "none";
+    sidebar.style.display = "flex";
+    (document.getElementById("open-Cal")).style.display ="none";
+
+
+}
+document.getElementById('open-Cal').addEventListener('click', onOpenCal);
+document.getElementById('close-Cal').addEventListener('click', onCloseCal);
+
+
+
+
 document.getElementById("submit-button").addEventListener("click", () => {
     const userMessage = document.getElementById('user-message').value;
 
