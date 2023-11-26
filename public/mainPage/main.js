@@ -56,8 +56,9 @@ function onOpen(){
 document.getElementById('open-Chat').addEventListener('click', onOpen);
 document.getElementById('close-Chat').addEventListener('click', onClose);
 
+//Calendar stuff
 
-function onClose(){
+function onCloseCal(){
     const sidebar = document.getElementById("Calendar-container");
     const button = document.getElementById("open-Cal");
     button.style.display = "flex";
@@ -65,7 +66,7 @@ function onClose(){
     (document.getElementById("open-Cal")).style.display ="flex";
 
 }
-function onOpen(){
+function onOpenCal(){
     const sidebar = document.getElementById("Calendar-container");
     const button = document.getElementById("open-Cal");
     button.style.display = "none";
@@ -74,8 +75,8 @@ function onOpen(){
 
 
 }
-document.getElementById('open-Cal').addEventListener('click', onOpen);
-document.getElementById('close-Cal').addEventListener('click', onClose);
+document.getElementById('open-Cal').addEventListener('click', onOpenCal);
+document.getElementById('close-Cal').addEventListener('click', onCloseCal);
 
 
 
