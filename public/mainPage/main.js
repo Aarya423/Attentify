@@ -1,18 +1,3 @@
-document.getElementById('chat-form').addEventListener('submit', async (event) => {
-    // event.preventDefault();
-    const userMessage = document.getElementById('user-message').value;
-    const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ message: userMessage }),
-    });
-    const data = await response.json();
-    document.getElementById('bot-response').textContent = data.message;
-});
-
-
 //Timer
 
 chrome.runtime.onMessage.addListener((request,sender,sendResponse) => {
@@ -70,3 +55,36 @@ function onOpen(){
 }
 document.getElementById('open-Chat').addEventListener('click', onOpen);
 document.getElementById('close-Chat').addEventListener('click', onClose);
+
+document.getElementById("submit-button").addEventListener("click", () => {
+    const userMessage = document.getElementById('user-message').value;
+
+    fetch('http://localhost:3000/api/chat', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ message: userMessage }),
+    })
+    // .then(response => JSON.parse(response)) // Parse the JSON from the response
+    .then(data => {
+        console.log('Data received:', data.message);
+        alert(data)
+    })
+    .finally(
+        data => {
+            alert(data)
+        }
+    )
+
+    // const response = fetch('http://localhost:3000/api/chat', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ message: userMessage }),
+    // })
+    // .then(data => {
+    //     console.log(data)
+    // })
+})
