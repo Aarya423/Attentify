@@ -49,10 +49,16 @@ body{
     width: 300px; /* Adjust the width of the chat container */
     height: 100vh; /* Make it full height of the viewport */
     background-color: #8AB17D; 
+    transition: transform 0.3s ease-in-out;
 }
 
 .chat button{
     width: 50px;
-
 }
 
+#open-Chat{
+    position: fixed;
+  top: 20px; /* Adjust the distance from the top */
+  right: 320px; /* Adjust the distance from the right */
+  z-index: 999; /* Ensure it's above other elements */
+}
