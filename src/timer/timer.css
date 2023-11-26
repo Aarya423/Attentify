@@ -1,0 +1,31 @@
+button.off {
+    background-color: #444;
+}
+
+button.on#work-button, button.on#break-button {
+    background-color: #2A9D8F;
+}
+
+#display{
+font-size: 125px;
+color: #264653;
+}
+body{
+    background-color: #F1FAEE;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    padding: 20px;
+    margin: 5px;
+    border-radius: 50px;
+    width: 150px;
+    height: auto;
+    font-size: 25px;
+    color: aliceblue;
+}

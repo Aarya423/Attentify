@@ -1,4 +1,3 @@
-
 var noteCount = 0;
 init_notes();
 
