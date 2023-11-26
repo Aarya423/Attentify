@@ -18,12 +18,14 @@
         <button class="open-Chat" id="open-Chat">Chat</button>
         <div class="chat-container" id="chat-container">
             <button class="close-Chat" id="close-Chat">Close</button>    
-            <div class="chat" id="chat">
-                <form id="chat-form">
-                    <input type="text" id="user-message" placeholder="Type your message here">
-                    <button type="submit" id="submit-button" onclick="onOpen()">Send</button>
-            </form>
-            <div id="bot-response"></div>
+            <div id="chat-container-two">
+                <div id="message-area">
+                    <!-- Chat messages will appear here -->
+                </div>
+                <div id="input-area">
+                    <input type="text" placeholder="Type your message...">
+                    <button>Send</button>
+                </div>
             </div>
         </div>
         

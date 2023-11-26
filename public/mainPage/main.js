@@ -80,19 +80,15 @@ document.getElementById("submit-button").addEventListener("click", () => {
 
 
     fetch('http://localhost:8000/chat', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        // body: JSON.stringify({ message: userMessage })
+    method: 'POST'
     })
-    .then((data) => {
-        alert(data)
+    .then(response => response.text()) // Process the text response
+    .then(text => {
+        alert(text); // Should alert "OK"
     })
-    .catch((error) => {
-        alert(error)
-    })
-
+    .catch(error => {
+        alert('Error: ' + error);
+    });
     // const response = fetch('http://localhost:3000/api/chat', {
     //     method: 'POST',
     //     headers: {
