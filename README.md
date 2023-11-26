@@ -20,7 +20,7 @@ Overall, Attentify is beneficial for its targeted approach to the specific chall
 We built it with HTML, CSS, Javascript, and React. 💻🔧
 
 ## Challenges we ran into
-We encountered challenges while connecting OpenAI to our backend and frontend. We overcame these challenges by persevering, even when we were burnt out and felt like quitting. Additionally, we faced challenges using CSS to align and format our complex plans. We overcame this through research and leveraging each other's specific skills. 🤔💡
+We encountered challenges while connecting OpenAI to our backend and frontend. We overcame these challenges by being creative, even when we were burnt out and felt like quitting. Additionally, we faced challenges using CSS to align and format our complex plans. We overcame this through research and leveraging each other's specific skills. 🤔💡
 
 ## Accomplishments that we're proud of
 We are proud of creating an app prototype that could one day help many people who suffer from procrastination and time management issues, especially members of the ADHD community. 🏆🎉
