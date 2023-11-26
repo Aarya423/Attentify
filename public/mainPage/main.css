@@ -23,7 +23,7 @@ body{
 
 }
 
-button{
+.TimerContainer button{
     padding: 20px;
     margin: 5px;
     background-color: #2A9D8F;
@@ -32,6 +32,33 @@ button{
     height: auto;
     font-size: 25px;
     color: aliceblue;
-    
 }
 
+.chat {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Fill the entire height of the container */
+    padding: 20px;
+}
+
+.chat-container{
+    display: none;
+    position: fixed;
+    top: 0; /* Adjust top position as needed */
+    right: 0; /* Align to the right side of the page */
+    width: 300px; /* Adjust the width of the chat container */
+    height: 100vh; /* Make it full height of the viewport */
+    background-color: #8AB17D; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.chat button{
+    width: 50px;
+}
+
+#open-Chat{
+    position: fixed;
+  top: 20px; /* Adjust the distance from the top */
+  right: 320px; /* Adjust the distance from the right */
+  z-index: 999; /* Ensure it's above other elements */
+}

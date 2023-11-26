@@ -12,6 +12,7 @@ document.getElementById('chat-form').addEventListener('submit', async (event) =>
     document.getElementById('bot-response').textContent = data.message;
 });
 
+
 //Timer
 
 chrome.runtime.onMessage.addListener((request,sender,sendResponse) => {
@@ -46,3 +47,35 @@ document.addEventListener("click", (event) => {
         });
     }
 })
+
+
+//faseeh stuff underneath
+
+// let buttonToggle = true;
+
+// function toggleSidebar() {
+//     const sidebar = document.getElementById("chat");
+//     const button = document.getElementById("toggle-Chat");
+
+//     buttonToggle = !buttonToggle;
+
+//     if (buttonToggle) {
+//         sidebar.style.display = "none";
+//         console.log("collapse");
+//     } else {
+//         sidebar.style.display = "flex";
+//         console.log("show");
+//     }
+// }
+
+function onClose(){
+    const sidebar = document.getElementById("chat-container");
+    const button = document.getElementById("toggle-Chat");
+    sidebar.style.display = "none";
+}
+function onOpen(){
+    const sidebar = document.getElementById("chat-container");
+    const button = document.getElementById("toggle-Chat");
+    sidebar.style.display = "flex";
+
+}
