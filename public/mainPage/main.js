@@ -59,23 +59,39 @@ document.getElementById('close-Chat').addEventListener('click', onClose);
 document.getElementById("submit-button").addEventListener("click", () => {
     const userMessage = document.getElementById('user-message').value;
 
-    fetch('http://localhost:3000/api/chat', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ message: userMessage }),
+    // fetch('http://localhost:8000/api/chat', {
+    // method: 'POST',
+    // headers: {
+    //     'Content-Type': 'application/json',
+    // },
+    // body: JSON.stringify({ message: userMessage }),
+    // })
+    // // .then(response => JSON.parse(response)) // Parse the JSON from the response
+    // .then(data => {
+    //     console.log('Data received:', data.message);
+    //     alert("angry")
+    // })
+    // .catch(
+    //     (err) => {
+    //         // alert(data)
+    //         alert (err)
+    //     }
+    // )
+
+
+    fetch('http://localhost:8000/chat', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        // body: JSON.stringify({ message: userMessage })
     })
-    // .then(response => JSON.parse(response)) // Parse the JSON from the response
-    .then(data => {
-        console.log('Data received:', data.message);
+    .then((data) => {
         alert(data)
     })
-    .finally(
-        data => {
-            alert(data)
-        }
-    )
+    .catch((error) => {
+        alert(error)
+    })
 
     // const response = fetch('http://localhost:3000/api/chat', {
     //     method: 'POST',
