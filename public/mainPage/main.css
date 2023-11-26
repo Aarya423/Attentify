@@ -76,9 +76,10 @@ div#chat {
 }
 
 #close-Chat{
-    width: 50px;
-    height: 50px;
-    margin: -3px;  
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    margin: 8px;
 }
 #chat-form{
     /* margin-top: 620px; */
@@ -87,7 +88,9 @@ div#chat {
 }
 
 #chat-container-two {
+    margin-left: 25px;
     height: 80%;
+    width: 90%;
 }
 
 #send-button {
@@ -209,7 +212,7 @@ border-radius: 100%;
     margin-bottom: 10px;
     width: fit-content;
     max-width: 100%;
-    font-size: larger;
+    font-size: x-large;
 }
 
 .user-message {
