@@ -42,13 +42,13 @@ body{
 }
 
 .chat-container{
-    display: flex;
+    display: none;
     position: fixed;
     top: 0; /* Adjust top position as needed */
     right: 0; /* Align to the right side of the page */
     width: 300px; /* Adjust the width of the chat container */
     height: 100vh; /* Make it full height of the viewport */
-    background-color: #d61b1b; 
+    background-color: #8AB17D; 
 }
 
 .chat button{
