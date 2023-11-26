@@ -7,6 +7,22 @@ function Timer() {
     const [working, setWorking] = useState(false);
     const [breaking, setBreaking] = useState(false);
 
+    chrome.storage.local.get(["timer"], (result => {
+        if (result.timer) {
+            let endTime = new Date(result.timer);
+            let now = new Date().getTime();
+            let differenceInMilliSeconds = endTime - now;
+            let differenceInSeconds = differenceInMilliSeconds / (1000);
+            let minutes = Math.floor(differenceInSeconds / 60);
+            let seconds = Math.ceil(differenceInSeconds % 60);
+            setMinutes(minutes)
+            setSeconds(seconds)
+        } else {
+            setMinutes("25")
+            setSeconds("00");
+        }
+    }))
+
     useEffect(() => {
         chrome.runtime.onMessage.addListener((request,sender,sendResponse) => {
             if (request.query === "time") {
@@ -47,16 +63,13 @@ function Timer() {
     )
 }
 
-function Display(props) {
+function Display(props) {    
     if (props.minutes && props.seconds) {
         return (
-            <div id="display">{props.minutes + ":" + props.seconds}</div>
-        )
-    } else {
-        return (
-            <div id="display">25:00</div>
+            <div id="display">{`${props.minutes}:${props.seconds}`}</div>
         )
     }
+          
 }
 
 function WorkButton(props) {
