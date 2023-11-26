@@ -171,7 +171,7 @@ body {
     margin-right: 50px;
     top: 0; /* Adjust top position as needed */
     left: 0; /* Align to the right side of the page */
-    width: 300px; /* Adjust the width of the chat container */
+    width: 480px; /* Adjust the width of the chat container */
     height: 100vh; /* Make it full height of the viewport */
     background-color: #F1FAEE; 
     transition: transform 0.3s ease-in-out;
@@ -185,6 +185,7 @@ body {
     justify-content: center;
     margin-top: 100px;
     margin-left: -270px;
+    width: 80%;
 }
 
 #open-Cal{
