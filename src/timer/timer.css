@@ -7,8 +7,9 @@ button.on#work-button, button.on#break-button {
 }
 
 #display{
-font-size: 125px;
-color: #264653;
+    font-size: 125px;
+    color: #264653;
+    height: 150px;
 }
 body{
     background-color: #F1FAEE;

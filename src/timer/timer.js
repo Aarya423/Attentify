@@ -60,7 +60,7 @@ function Timer() {
 
     return(
         <div id="timer">
-            <Display minutes={minutes} seconds={seconds}/>
+            <Display working={working} breaking={breaking} minutes={minutes} seconds={seconds}/>
             <div id="timer-buttons">
                 <WorkButton startWork={startWork} working={working}/>
                 <BreakButton startBreak={startBreak} breaking={breaking}/>
@@ -89,8 +89,11 @@ function Display(props) {
         return (
             <div id="display">{`${minutes}:${seconds}`}</div>
         )
-    }
-          
+    } else {
+        return (
+            <div id="display">{`25:00`}</div>
+        )
+    } 
 }
 
 function WorkButton(props) {
