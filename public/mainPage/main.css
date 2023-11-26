@@ -42,7 +42,7 @@ body{
 }
 
 .chat-container{
-    display: none;
+    display: flex;
     position: fixed;
     top: 0; /* Adjust top position as needed */
     right: 0; /* Align to the right side of the page */
@@ -61,4 +61,9 @@ body{
   top: 20px; /* Adjust the distance from the top */
   right: 320px; /* Adjust the distance from the right */
   z-index: 999; /* Ensure it's above other elements */
+}
+
+#close-Chat{
+    width: 50px;
+    height: 50px;
 }

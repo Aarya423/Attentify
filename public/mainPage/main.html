@@ -19,11 +19,11 @@
 
         <button class="open-Chat" id="open-Chat" onclick="onOpen()">Chat</button>
         <div class="chat-container" id="chat-container">
-            <button class="close-Chat" id="close-Chat" onclick="onClose()">Chat</button>    
+            <button class="close-Chat" id="close-Chat" onclick="onClose()">Close</button>    
             <div class="chat" id="chat">
                 <form id="chat-form">
                     <input type="text" id="user-message" placeholder="Type your message here">
-                    <button type="submit">Send</button>
+                    <button type="submit" onclick="onOpen()">Send</button>
             </form>
             <div id="bot-response"></div>
             </div>
