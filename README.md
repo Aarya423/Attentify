@@ -4,7 +4,7 @@
 
 
 ## Inspiration
-One of our team members, Aiden, has ADHD. We were moved when he shared his perspective and story. So, we created this app to help people like Aiden track time effectively and be more productive. 🔥🌟
+One of our team members, Aiden, has ADHD. We were moved when he shared his perspective and story. So, we created this app to help people with ADHD track time effectively and be more productive. 🔥🌟
 
 ## What it does
 Attentify is a specialized productivity tool designed specifically for individuals with ADHD. It aims to assist them in managing their tasks and improving their focus and study habits. The core features of Attentify include:
